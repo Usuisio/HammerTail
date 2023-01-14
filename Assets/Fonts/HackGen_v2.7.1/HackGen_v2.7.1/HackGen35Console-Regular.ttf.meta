@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bba546db848708d4c887518339e93227
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - HackGen35 Console
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 105ff011f9706d44a88a6d4c0e379310, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

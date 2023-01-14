@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] bool CanMove = true;
+
     Animator animator;
     Rigidbody rb;
 
@@ -19,6 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerGroundCollider _playerGroundCollider;
     [SerializeField] PlayerHeadCollider _playerHeadCollider;
 
+    [SerializeField] AudioSource _source;
+    [SerializeField] AudioClip _jump;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,17 +33,21 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        var foot_pos = new Vector3(transform.position.x, transform.position.y - 0.51f, 0);
-        bool floating = (Physics.OverlapSphere(foot_pos, m_WhatIsGround).Length == 0);
+        //var foot_pos = new Vector3(transform.position.x, transform.position.y - 0.51f, 0);
+        //bool floating = (Physics.OverlapSphere(foot_pos, m_WhatIsGround).Length == 0);
 
         bool isGround = _playerGroundCollider.IsGround;
 
-        if (isGround && Input.GetButtonDown("Jump"))
+        horizontal = 0;
+        if (CanMove)
         {
-            MoveJump();
-        }
+            if (isGround && Input.GetButtonDown("Jump"))
+            {
+                MoveJump();
+            }
 
-        horizontal = Input.GetAxisRaw("Horizontal");
+            horizontal = Input.GetAxisRaw("Horizontal");
+        }
         MoveHorizontal();
 
         ChangeAnimation();
@@ -92,6 +101,10 @@ public class Player : MonoBehaviour
 
     public void MoveJump()
     {
+        _source.PlayOneShot(_jump);
         rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
     }
+
+    public void EnableMove() => CanMove = true;
+    public void DisableMove() => CanMove = false;
 }

@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: bbd260e06c813a64799899a13ef842be
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kazesawa
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0a1611a349acca7438be3d886ac3c575, type: 3}
+  - {fileID: 12800000, guid: 782e068f0ee7b79488437a95cca0b6d8, type: 3}
+  - {fileID: 12800000, guid: 95149361182c0bc49b0f6be1f3134ac6, type: 3}
+  - {fileID: 12800000, guid: a100c1bf420ca4c43bb07ba8ea0a7b02, type: 3}
+  - {fileID: 12800000, guid: b0576d894bfc72b499c591231b5cf1c9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
